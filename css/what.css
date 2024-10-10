@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+body {font-family:  'metro'; font-size: 1.6rem; line-height: 1.5; color: #000; overflow-x: hidden;}
+.inner { margin: 0 auto; padding: 0 3%; }
+:root{ 
+    --mainFont:'metro';
+    --subcolor: #F48E89;
+}
+
+/* 애니메이션 영역 */
+@keyframes fadeRight {
+    0% { transform: translateX(-100px); opacity: 0;}
+    100% { transform: translateX(0); opacity: 1;}
+}
+/*  { animation: fadeUp 1s;} */
+
+@keyframes fadeLeft {
+    0% { transform: translateX(100px); opacity: 0;}
+    100% { transform: translateX(0); opacity: 1;}
+}
+
+@keyframes fadeUp {
+    0% { transform: translateY(100px); opacity: 0;}
+    100% { transform: translateY(0); opacity: 1;}
+}
+
+@keyframes fadeDown {
+    0% { transform: translateY(100px); opacity: 0;}
+    100% { transform: translateY(0); opacity: 1;}
+}
+
+
+/* scroll 영역 */
+@keyframes ball {
+    0% {opacity: 1;}
+    100% { transform: translateY(20px); opacity: 0;}
+}
+
+.scroll {position: absolute; left: 50%; bottom: 3%; transform: translateX(-50%); color: #fff;}
+.stroke { display: block; width: 20px; height: 40px; border: 2px solid #fff; border-radius: 20px; margin: 0 auto 10px;} /* 블럭요소 가운데 위치, 마진 auto */
+.ball {display: block; background: #fff; border-radius: 50%; width: 6px; height: 6px; position: absolute; left: calc(50% - 3px); bottom: 60px; animation: ball 1s infinite; }
+.scroll span {font-family: var(--mainFont);}
+
+@media (max-width:1024px) {
+    .scroll {display: none;}
+}
+
+/* what1 */
+#what1 { background: #949A52;}
+#what1 .inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap; gap: 20px; } 
+#what1 .what_txt {animation: fadeUp 1s; text-align: center; width: 680px; color: #fff;}
+#what1 .what_txt h2 { font-weight: 900; font-size: 3.5rem; padding-bottom: 20px;}
+#what1 .what_txt p { font-size: 1.8rem;}
+#what1 .what_img01 img {display: block; width: 100%; height: 100%; padding-bottom: 50px;  cursor: url("../images/main/mouse_bg.png"), auto; animation: fadeRight 1s;}
+#what1 .what_img02 img {display: block; width: 100%; height: 100%; padding-top: 50px;  cursor: url("../images/main/mouse_bg.png"), auto; animation: fadeLeft 1s;}
+
+@media(max-width:1440px){
+    #what1 .what_txt { width: 500px;}
+    #what1 .what_txt h2 { font-size: 2.5rem;}
+    #what1 .what_txt p { font-size: 1.6rem;}
+/*     #what1 .what_img01 img { width: 80%;}
+    #what1 .what_img02 img { width: 80%;} */
+}
+
+@media(max-width:1000px){ 
+    #what1 .inner { flex-wrap: wrap; margin: 50px 0;}
+    #what1 .what_img01 { margin: 0 auto;}
+    #what1 .what_img02 { margin: 0 auto;}
+    #what1 .what_txt {width: 100%;}
+} 
+
+@media(max-width:768px){
+    #what1 .what_txt h2 { font-size: 2rem;}
+    #what1 .what_txt p { font-size: 1.3rem;}
+}
+
+/* what2 */
+#what2 { background: #6E7334;  color: #fff; padding: 0 2%;}
+#what2 h2 { text-align: center; padding: 20px 0; font-weight: 900; animation: fadeUp 2s;}
+#what2 .what2_img { display: flex; justify-content: space-between; gap: 20px; overflow: hidden;  cursor: url("../images/main/mouse_bg.png"), auto; width: 100%;}
+#what2 .what2_img img { display: block; width: 100%; height: 100%;  transition: all 0.5s; animation: fadeUp 2s;}
+#what2 .what2_img img:hover { transform: scale(1.1);}
+
+@media(max-width:1200px){
+    #what2 h2 { padding: 50px 0 30px;}
+    #what2 .what2_img { flex-wrap: wrap; justify-content: center; margin-bottom: 50px;}
+
+}
+@media(max-width:768px){
+    #what2 h2 { font-size: 2rem;}
+    #what2 .what2_img  { gap: 20px;}
+    #what2 .what2_img img:hover { transform: scale(1.0);}
+}
+
+/* what3 */
+#what3 { background: #949A52;}
+#what3 .what3_img { display: flex; cursor: url("../images/main/mouse_bg.png"), auto; position: relative;}
+#what3 .what3_img img { display: block; width: 100%; height: 100%;}
+#what3 .what3_img p a { display: block; position: absolute; right: 3%; bottom: 5%; color: #fff;}
+#what3 .what3_img p a:hover { text-decoration: underline;}
+
+
+@media(max-width:768px){
+    #what3 .what3_img { flex-wrap: wrap; width: 100%; height: 100%;}
+
+}

@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+body {font-family:  'metro'; font-size: 1.6rem; line-height: 1.5; color: #000; overflow-x: hidden;}
+:root{ 
+    --mainFont:'metro';
+    --subcolor: #F48E89;
+}
+
+/* 애니메이션 영역 */
+@keyframes fadeRight {
+    0% { transform: translateX(-100px); opacity: 0;}
+    100% { transform: translateX(0); opacity: 1;}
+}
+/*   animation: fadeUp 1s; */
+
+@keyframes fadeLeft {
+    0% { transform: translateX(100px); opacity: 0;}
+    100% { transform: translateX(0); opacity: 1;}
+}
+
+@keyframes fadeUp {
+    0% { transform: translateY(100px); opacity: 0;}
+    100% { transform: translateY(0); opacity: 1;}
+}
+
+@keyframes fadeDown {
+    0% { transform: translateY(100px); opacity: 0;}
+    100% { transform: translateY(0); opacity: 1;}
+}
+
+
+/* scroll 영역 */
+@keyframes ball {
+    0% {opacity: 1;}
+    100% { transform: translateY(20px); opacity: 0;}
+}
+
+.scroll {position: absolute; left: 50%; bottom: 3%; transform: translateX(-50%); color: #fff;}
+.stroke { display: block; width: 20px; height: 40px; border: 2px solid #fff; border-radius: 20px; margin: 0 auto 10px;} /* 블럭요소 가운데 위치, 마진 auto */
+.ball {display: block; background: #fff; border-radius: 50%; width: 6px; height: 6px; position: absolute; left: calc(50% - 3px); bottom: 60px; animation: ball 1s infinite; }
+.scroll span {font-family: var(--mainFont);}
+
+@media (max-width:1024px) {
+    .scroll {display: none;}
+}
+
+/* #limites1 */
+#limites1 { background: #3F2309; color: #fff;}
+#limites1 .inner22 {display: flex; justify-content: space-between; gap: 30px; align-items: center; flex-wrap: nowrap; padding: 2% 0 0 3%;}
+#limites1 .left1 { width: 40%; animation: fadeRight 1s;}
+#limites1 .left1 h2 { text-transform: uppercase; font-weight: 600; font-size: 2rem; padding-bottom: 5px;}
+#limites1 .left1 .left { position: relative;}
+#limites1 .left1 .left_img { width: 100%; display: block;}
+#limites1 .right1 { width: 60%; animation: fadeUp 1s;}
+#limites1 .right1 .r_txt { padding-bottom: 30px;}
+#limites1 .right1 .r_txt h2 {font-size: 3rem;}
+#limites1 .right1 .r_txt p { width: 800px; font-weight: 200;}
+#limites1 .limt1 ul li { width: 100%; height: 100%;  cursor: url("../images/main/mouse_bg.png"), auto; }
+
+#limites1 .swiper-button-next, #limites1 .swiper-button-prev { color: #000; }
+
+#limites1 .bag_btn { display: block; background: none; font-size: 4rem; border: none; cursor: url("../images/main/mouse_bg.png"), auto; position: absolute; left: 4%; bottom: 8%;}
+#limites1 .bag dl { position: absolute; left: 10%; bottom: 30%; cursor: pointer;}
+#limites1 .bag dl dd { font-size: 1.2rem; position: absolute; left: 0; top: 20px; text-align: center; padding-top: 5px;}
+
+@media(max-width:1200px){
+    #limites1 .inner22 { flex-wrap: wrap; margin: 100px 0 150px; padding: 0 5%;}
+    #limites1 .left1 { width: 100%;}
+    #limites1 .left1 .left_img { width: 100%; text-align: center;}
+    #limites1 .left1 h2 { text-align: center;}
+    #limites1 .right1 { width: 100%; text-align: center;}
+    #limites1 .right1 .r_txt p  { margin: 0 auto;}
+    #limites1 .bag { display: none;}
+}
+
+@media(max-width:768px){
+    #limites1 .right1 .r_txt h2 {font-size: 2.5rem;}
+    #limites1 .right1 .r_txt p { width: 380px; font-size: 1.3rem;}    #limites1 .left1 .left_img img {width: 70%; }
+}
+@media(max-width:400px){
+    #limites1 .right1 .r_txt h2 {font-size: 2rem;}
+    #limites1 .right1 .r_txt p { width: 300px;}
+}
+
+/* #limites2 */
+#limites2 { background: url('../images/sub/edition/edition_bg.png')no-repeat center / cover; color: #fff; } 
+#limites2 .inner33 {display: flex; justify-content: space-between; gap: 50px; align-items: center; flex-wrap: nowrap; position: relative;}
+
+#limites2 .left { width: 60%; animation: fadeUp 3s;}
+#limites2 .right { width: 40%; cursor: url("../images/main/mouse_bg.png"), auto;}
+#limites2 .right .img { width: 100%; animation: fadeLeft 3s;}
+#limites2 .left  .l_txt { padding-bottom: 30px; padding-left: 5%;}
+#limites2 .left  .l_txt h2 {font-size: 3rem;}
+#limites2 .left  .l_txt p { width: 800px; font-weight: 200;}
+ #limites2 .left .limt2 li { width: 100%; height: 100%;  cursor: url("../images/main/mouse_bg.png"), auto;} 
+
+
+#limites2 .swiper-button-next, #limites2 .swiper-button-prev { color: #000; }
+
+#limites2 .bag_btn { display: block; background: none; font-size: 4rem; border: none; cursor: url("../images/main/mouse_bg.png"), auto; position: absolute; right: 5%; bottom: 4%;}
+#limites2 .bag dl { position: absolute;  cursor: pointer; right: 13%; bottom: 3%;}
+#limites2 .bag dl dd { font-size: 1.2rem; position: absolute; left: 0; top: 0px;  padding: 7px 0 0 23px;}
+
+@media(max-width:1200px){
+    #limites2 .inner33 { flex-wrap: wrap; margin: 100px 0 150px; padding: 0 5%;}
+    #limites2 .left { width: 100%; text-align: center;}
+    #limites1 .right { width: 100%; text-align: center; margin: 0 auto;}
+    #limites2 .left  .l_txt p  { margin: 0 auto;}
+    #limites2 .bag { display: none;}
+
+}
+
+@media(max-width:768px){
+    #limites2 .left  .l_txt h2 {font-size: 2.5rem; line-height: 1.2;}
+    #limites2 .left  .l_txt p { width: 380px; font-size: 1.3rem; padding: 10px 0 30px;}
+    #limites2 .right { width: 100%;}
+    #limites2 .right .img img { width: 100%; }
+}
+@media(max-width:400px){
+    #limites2 .left  .l_txt h2 { font-size: 2rem;}
+    #limites2 .left  .l_txt p { width: 300px;}
+}

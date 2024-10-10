@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'metro';
+    src: url('../font/Metropolis-Light.otf') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metro';
+    src: url('../font/Metropolis-ExtraLight.otf') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metro';
+    src: url('../font/Metropolis-Medium.otf') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metro';
+    src: url('../font/Metropolis-ExtraBold.otf') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metro';
+    src: url('../font/Metropolis-Bold.otf') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metro';
+    src: url('../font/Metropolis-Black.otf') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'metro';
+    src: url('../font/Metropolis-BlackItalic.otf') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
